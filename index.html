@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Coiny&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Coiny&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/huntesla-gloficka" rel="stylesheet">
+</head>
+<style>
+    *,
+    html {
+        padding: 0;
+        margin: 0;
+        font-family: "Poppins", sans-serif;
+    }
+
+    body {
+        height: 100vh;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        flex-direction: column;
+        background-image: url('gambar/background.png');
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    @keyframes masuk {
+        0% {
+            scale: 0%;
+        }
+
+        100% {
+            scale: 100%;
+        }
+    }
+
+
+    .bungkusan {
+        height: 100vh;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .container {
+        height: 100%;
+        width: 100%;
+        overflow-y: scroll;
+        scroll-snap-type: y mandatory;
+    }
+
+    .scroll {
+        width: 100%;
+        height: 100%;
+        scroll-snap-align: start;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .gambar_kue {
+        width: 90%;
+        height: 30%;
+        display: flex;
+        justify-content: center;
+        align-items: end;
+    }
+
+    .no1 {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .dekor {
+        background-color: transparent;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        position: fixed;
+    }
+
+    .dekor img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .dekor2 {
+        background-color: transparent;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        position: fixed;
+        margin-top: 87vh;
+    }
+
+    .dekor2 img {
+        width: 100px;
+        height: 100px;
+    }
+
+    #scroll2 {
+        width: 100%;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .content {
+        width: 100vw;
+        height: 80%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .gif_kue {
+        width: 70px;
+        animation: masuk .2s ease-in;
+    }
+
+    .rotateX {
+        transform: scaleX(-1);
+    }
+
+    .kue {
+        width: 200px;
+        margin-top: 20px;
+        animation: masuk .2s ease-in;
+    }
+
+    .amplop {
+        width: 60px;
+    }
+
+    .selamat {
+        margin: 20px;
+        font-family: 'Huntesla Gloficka', sans-serif;
+        animation: masuk .2s ease-in;
+
+    }
+
+    p {
+        /* font-family: "Poppins", sans-serif; */
+        font-family: "Caveat", cursive;
+        font-weight: bold;
+        font-style: normal;
+
+    }
+
+    a {
+        font-size: 50px;
+        text-decoration: none;
+        animation: masuk .2s ease-in;
+    }
+
+    .kata {
+        width: 80%;
+        background-color: transparent;
+        padding: 10px;
+        display: flex;
+        justify-content: space-between;
+        backdrop-filter: blur(20px);
+        border: 1px solid #000;
+        border: 1px solid #000;
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px #000;
+    }
+
+    @keyframes jalan {
+        0% {
+            transform: translateX(0vw);
+        }
+
+        100% {
+            transform: translateX(90vw);
+        }
+    }
+
+
+    .origami {
+        display: flex;
+        justify-content: end;
+        align-items: start;
+        flex-direction: column;
+        width: 100%;
+        position: relative;
+    }
+
+    .gif {
+        width: 100px;
+        margin: 5px;
+        animation: jalan 5s infinite;
+    }
+
+    .kata div {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .kata img {
+        width: 100px;
+        height: 100px;
+        margin-left: 10px;
+        margin-top: 10px;
+    }
+
+    .gif_kata {
+        width: 150px;
+    }
+
+    .isian {
+        width: 65%;
+    }
+
+    .baris {
+        height: 30%;
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .box {
+        width: 100px;
+        height: 100px;
+        padding: 20px;
+        background-color: #ffffff;
+        border: 1px solid #000;
+        border-radius: 5px;
+        box-shadow: 0px 0px 5px #000;
+        display: flex;
+        justify-content: center;
+        rotate: 10deg;
+    }
+
+    .bawah_kata {
+        width: 100%;
+    }
+
+    .box img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .lingkaran {
+        width: 80px;
+        height: 80px;
+        padding: 20px;
+        background-color: #ffffff;
+        border: 1px solid #000;
+        border-radius: 100%;
+        box-shadow: 0px 0px 5px #000;
+        display: flex;
+        justify-content: center;
+    }
+
+    @keyframes jdg{
+        0%{
+            scale: 90%;
+        }
+        50%{
+            scale: 100%;
+        }
+        100%{
+            scale: 90%;
+        }
+    }
+
+    .notif{
+        text-align: center;
+        animation: jdg 1s infinite;
+        color: #00000042;
+    }
+
+    .lingkaran img {
+        width: 80px;
+        height: 80px;
+        border-radius: 100%;
+    }
+
+    .hope {
+        width: 60%;
+        padding: 20px;
+        background-color: #ffffff;
+        border: 1px solid #000;
+        border-radius: 5px;
+        box-shadow: 0px 0px 5px #000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        animation: masuk .2s ease-in;
+    }
+
+    .tombol_pesawat {
+        width: 10px;
+    }
+
+    input {
+        margin: 20px;
+        border: 1px solid #000;
+        border-radius: 5px;
+        padding: 10px;
+        width: 70%;
+    }
+
+    .akhir {
+        display: flex;
+        font-size: large;
+        font-weight: bolder;
+        margin-top: 20px;
+    }
+
+    .play {
+        display: flex;
+        background-color: #526bea;
+        border-radius: 5px;
+        padding: 10px;
+        margin-top: 60%;
+        font-size: medium;
+        border: 1px solid #000;
+        position: absolute;
+    }
+
+    .gif2 {
+        width: 150px;
+    }
+
+    .stiker {
+        display: flex;
+        width: 60px;
+        margin-left: 70%;
+        rotate: -30deg;
+    }
+
+    .stiker2 {
+        display: flex;
+        width: 60px;
+        margin-right: 70%;
+        rotate: 30deg;
+    }
+
+    .tombol {
+        display: flex;
+        background-color: #526bea;
+        padding: 5px 15px;
+        border-radius: 5px;
+        border: 1px solid #000;
+        font-size: medium;
+        margin-top: 10px;
+    }
+
+    .send {
+        width: 120px;
+        height: 120px;
+    }
+
+    main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .spinner {
+        width: 64px;
+        height: 64px;
+        border: 6px solid #444;
+        border-top: 6px solid #00c5e7;
+        border-radius: 50%;
+        animation: spin 1.3s linear infinite;
+    }
+
+    @keyframes spin {
+        0% {
+            transform: rotate(0deg);
+        }
+
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+
+    @media (min-width: 767px) {
+        .scroll {
+            display: flex;
+            justify-content: center;
+        }
+
+        #scroll2 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .kata {
+            width: 400px;
+        }
+
+        .hope {
+            width: 400px;
+            height: 200px;
+        }
+
+        .play {
+            margin-top: 20%;
+        }
+
+    }
+</style>
+
+<body>
+    <div class="dekor">
+        <img src="gambar/dekor_kiri.png" alt="">
+        <img src="gambar/dekor_kanan.png" alt="">
+    </div>
+    <a id="play" class="play">Mulai</a>
+    <div class="bungkusan" id="bungkusan">
+        <div class="container">
+            <div class="scroll">
+                <div class="no1">
+                    <div class="content">
+                        <div class="gambar_kue">
+                            <img src="gambar/hore.gif" alt="" class="gif_kue">
+                            <img src="gambar/kue.png" alt="kue" class="kue">
+                            <img src="gambar/hore.gif" alt="" class="gif_kue rotateX">
+                        </div>
+                        <h2 class="selamat">Selamat Ulang Tahun</h2>
+                        <a href="#scroll2"><img src="gambar/email.png" class="amplop" alt=""></a>
+                    </div>
+                </div>
+            </div>
+            <div class="scroll" id="scroll2">
+                <div class="content">
+                    <div class="origami">
+                        <img src="gambar/origami.gif" alt="" class="gif">
+                    </div>
+                    <div class="kata">
+                        <p>Selamat Ulang Tahun Lulu 🎉
+                            Selamat naik versi dari versi.17 ke versi.18!
+                            Semoga update kali ini tanpa bug, tanpa error, dan tetap lucu walau hidup sering nge-lag🙃</p>
+                        <div><img src="gambar/roket.png" alt=""></div>
+                    </div>
+                    <img src="gambar/gembira.gif" alt="" class="gif_kata">
+                    <img src="gambar/sepotong.png" alt="" class="stiker">
+                    <img src="gambar/cup.png" alt="" class="stiker2">
+                    <p class="notif">scroll untuk lanjut</p>
+                </div>
+            </div>
+            <div class="scroll">
+                <div class="content">
+                    <div class="baris">
+                        <img src="gambar/send.gif" alt="" class="send">
+                        <div class="box">
+                            <img src="gambar/ultah.gif" alt="">
+                        </div>
+                    </div>
+                    <div class="baris">
+                        <div class="hope" id="hope">
+                            <h3>Harapan</h3>
+                            <input type="text" placeholder="Ketik disini" id="isiTeks">
+                            <a class="tombol" onclick="kirim()"><img src="gambar/send.png" alt=""
+                                    class="tombol_pesawat"></a>
+                        </div>
+                        <div class="hope" id="loading">
+                            <main role="main" aria-live="polite" aria-busy="true">
+                                <div>
+                                    <div class="spinner" aria-hidden="true"></div>
+                                </div>
+                            </main>
+                        </div>
+                    </div>
+                    <img src="gambar/coklat.png" alt="" class="stiker">
+                    <img src="gambar/2kue.png" alt="" class="stiker2">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="dekor2">
+        <img src="gambar/kado_kiri.png" alt="">
+        <img src="gambar/kado_kanan.png" alt="">
+    </div>
+
+    <script>
+        let a = 0;
+        let b = 10;
+        loading.style.display = "none";
+        bungkusan.style.display = "none";
+
+        let play = document.getElementById("play")
+        function playMusik() {
+            const lagu = "gambar/impacto.mp3";
+            let audio = new Audio(lagu);
+            audio.play();
+            bungkusan.style.display = "flex";
+            play.style.display = "none";
+        }
+        play.addEventListener("click", playMusik);
+
+        function terkirim() {
+            let time = 0;
+            let loaded = setInterval((interval) => {
+                time += 1
+                if (time == 3) {
+                    const main = document.querySelector('main');
+                    main.innerHTML = '<img src="gambar/hmm.gif" alt="" style="witdh:100px; height:100px;"><p style="font-weight: bold; margin:10px;">Semoga Terkabul</p>';
+                }
+            }, 1000)
+            setInterval((interval) => {
+                clearInterval(loaded)
+            }, 95000)
+
+            loading.style.display = "flex";
+            document.addEventListener('DOMContentLoaded', () => {
+            });
+        }
+        function kirim() {
+            let kata = isiTeks.value;
+            if (kata.length > 0) {
+                hope.style.display = "none";
+                terkirim();
+            }
+        }
+    </script>
+</body>
+
+</html>
